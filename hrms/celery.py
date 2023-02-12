@@ -1,5 +1,5 @@
 import os
-
+#import test
 from celery import Celery
 from celery.schedules import crontab
 from django.apps import apps
