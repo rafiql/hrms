@@ -1,12 +1,30 @@
-asgiref #@ file:///C:/Users/BUILDE~1/AppData/Local/Temp/abs_cchykh5sgr/croots/recipe/asgiref_1661287542702/work
-certifi #@ file:///C:/b/abs_85o_6fm0se/croot/certifi_1671487778835/work/certifi
-Django #@ file:///C:/Users/BUILDE~1/AppData/Local/Temp/abs_eeor5o9jj8/croots/recipe/django_1661292534510/work
+amqp==5.1.1
+asgiref==3.4.1
+async-timeout==4.0.2
+billiard==3.6.4.0
+cached-property==1.5.2
+celery==5.1.2
+certifi==2022.12.7
+click==7.1.2
+click-didyoumean==0.3.0
+click-plugins==1.1.1
+click-repl==0.2.0
+Django==3.2.18
 django-environ==0.9.0
 djangorestframework==3.14.0
+importlib-metadata==4.8.3
+kombu==5.1.0
+packaging==21.3
+prompt-toolkit==3.0.36
 psycopg2==2.9.5
+pyparsing==3.0.9
 pytz==2022.7.1
-sqlparse #@ file:///C:/b/abs_83jn6owfpc/croot/sqlparse_1668793499314/work
-tzdata #@ file:///tmp/build/80754af9/python-tzdata_1611693927741/work
+redis==4.3.5
+six==1.16.0
+sqlparse==0.4.3
+typing_extensions==4.1.1
+tzdata==2022.7
+vine==5.0.0
+wcwidth==0.2.6
 wincertstore==0.2
-redis
-celery
+zipp==3.6.0

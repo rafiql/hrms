@@ -161,6 +161,8 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 LANGUAGE_CODE = 'en-us'
 
+TIME_ZONE = env.str('TIME_ZONE', default='UTC')
+
 USE_I18N = True
 
 USE_TZ = True
@@ -184,7 +186,7 @@ MEDIA_URL = '/media/'
 
 
 # Celery settings
-REDIS_HOST = env.str('REDIS_HOST')
+REDIS_HOST = env.str('REDIS_HOST', default='localhost')
 REDIS_PORT = env.int('REDIS_PORT', default=6379)
 REDIS_PASSWORD = env.str('REDIS_PASSWORD', default='')
 REDIS_DB = env.int('REDIS_DB', default=0)
