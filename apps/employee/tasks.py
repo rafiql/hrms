@@ -1,8 +1,8 @@
 
-from celery import task
+from hrms.celery import app
 from datetime import datetime
 from apps.employee.models import Employee
 
-@task(name='employee.tasks.deactive_expired_objects')
+@app.task(name='employee.tasks.deactive_expired_objects')
 def deactive_expired_objects():
-    Employee.objects.filter(phone = '01402639757').update(email_verified=True)
+    Employee.objects.all().update(email_verified=True)

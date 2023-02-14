@@ -130,7 +130,6 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
     ),
-    'PAGE_SIZE': 30,
     'DATE_INPUT_FORMATS': DATE_INPUT_FORMATS,
 }
 
@@ -162,8 +161,6 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
-
 USE_I18N = True
 
 USE_TZ = True
@@ -191,3 +188,9 @@ REDIS_HOST = env.str('REDIS_HOST')
 REDIS_PORT = env.int('REDIS_PORT', default=6379)
 REDIS_PASSWORD = env.str('REDIS_PASSWORD', default='')
 REDIS_DB = env.int('REDIS_DB', default=0)
+
+CELERY_BROKER_URL = CELERY_RESULT_BACKEND= 'redis://:{REDIS_PASSWORD}@{REDIS_HOST}:{REDIS_PORT}/'.format(
+    REDIS_PASSWORD=REDIS_PASSWORD, REDIS_HOST=REDIS_HOST, REDIS_PORT=REDIS_PORT)   
+CELERY_ACCEPT_CONTENT = ['application/json']  
+CELERY_TASK_SERIALIZER = 'json'  
+CELERY_RESULT_SERIALIZER = 'json'  

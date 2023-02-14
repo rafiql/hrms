@@ -1,0 +1,25 @@
+*.bak
+*.pyc
+*.db
+.idea/
+venv/
+logs.txt
+*.iml
+/media/
+static/
+/static/build
+.DS_Store
+node_modules/
+npm-debug.log
+*.sqlite3
+*.rdb
+/templates/base.html
+**/__pycache__/*
+celerybeat-schedule
+
+# dotenv
+.env
+
+# virtualenv
+venv/
+/conf/celery_sentinel_config.py
